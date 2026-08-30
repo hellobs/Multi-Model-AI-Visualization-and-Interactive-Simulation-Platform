@@ -1,0 +1,1413 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48799af0622c8864cbe1f43f60ffcbec, type: 3}
+  m_Name: MCPToolMetadataCache
+  m_EditorClassIdentifier: 
+  _tools:
+  - Name: project_validator
+    Description: 'Universal project validation. Actions: full_scan, scan_missing_scripts,
+      scan_colliders, scan_duplicates, scan_references, check_layers, check_performance,
+      validate_prefabs'
+    ClassName: MCPGenericValidator
+    Namespace: MCPForUnity.Editor.Systems
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Systems.MCPGenericValidator, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: assign_reference
+    Description: 'Assigns component references between GameObjects. Params: sourceObject,
+      sourceComponent (optional), targetObject, targetComponent, targetProperty'
+    ClassName: MCPReferenceAssigner
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPReferenceAssigner, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: tester
+    Description: 'TESTER System: full_scan, test_component, test_references, test_systems,
+      stress_test, validate_scene, find_bugs, performance_profile'
+    ClassName: MCPTesterSystem
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPTesterSystem, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: batch_execute
+    Description: 
+    ClassName: BatchExecute
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.BatchExecute, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: execute_menu_item
+    Description: 
+    ClassName: ExecuteMenuItem
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ExecuteMenuItem, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_asset
+    Description: 
+    ClassName: ManageAsset
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ManageAsset, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_editor
+    Description: 
+    ClassName: ManageEditor
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ManageEditor, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_gameobject
+    Description: 
+    ClassName: ManageGameObject
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ManageGameObject, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_material
+    Description: 
+    ClassName: ManageMaterial
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ManageMaterial, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_scene
+    Description: 
+    ClassName: ManageScene
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ManageScene, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_script
+    Description: 
+    ClassName: ManageScript
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ManageScript, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_shader
+    Description: 
+    ClassName: ManageShader
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ManageShader, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: create_scriptable_object
+    Description: 'Creates ScriptableObject assets. Params: typeName, assetPath, properties
+      (optional object)'
+    ClassName: MCPCreateScriptableObject
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPCreateScriptableObject, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: assign_audio_clip
+    Description: 'Assigns AudioClip to AudioSource or component. Params: clipPath,
+      targetObject, targetComponent (optional), targetProperty (optional, default:
+      clip)'
+    ClassName: MCPAssignAudioClip
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPAssignAudioClip, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: play_mode_control
+    Description: 'Controls Unity Play Mode. Actions: play, pause, stop, step, status,
+      simulate_key'
+    ClassName: MCPPlayModeControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPPlayModeControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: prefab_editor
+    Description: 'Edit prefabs. Actions: open, save, close, get_contents, modify_property'
+    ClassName: MCPPrefabEditor
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPPrefabEditor, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: undo_redo
+    Description: 'Controls Unity Undo system. Actions: undo, redo, clear, get_history,
+      begin_group, end_group'
+    ClassName: MCPUndoRedo
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPUndoRedo, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: animation_control
+    Description: 'Controls Animator/Animation. Actions: get_parameters, set_parameter,
+      get_clips, play_clip, get_state'
+    ClassName: MCPAnimationControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPAnimationControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: execute_advanced
+    Description: 'Enhanced C# execution. Actions: create_asset, set_prefs, get_prefs,
+      invoke_static, get_types'
+    ClassName: MCPExecuteAdvanced
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPExecuteAdvanced, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: wait_for_compilation
+    Description: 'Checks compilation status. Actions: status, wait (blocks until
+      done)'
+    ClassName: MCPWaitForCompilation
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPWaitForCompilation, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: endurance_bridge
+    Description: 'ENDURANCE project tools: screenshot, performance, physics_state,
+      audit, scene_health, assign_reference'
+    ClassName: EnduranceBridge
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.EnduranceBridge, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: navmesh_control
+    Description: 'Controls NavMesh system. Actions: bake, clear, get_settings, set_settings,
+      get_areas, add_modifier, get_agents'
+    ClassName: MCPNavMeshControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPNavMeshControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: particle_control
+    Description: 'Controls Particle Systems. Actions: create, get_settings, set_main,
+      set_emission, set_shape, play, stop, get_all'
+    ClassName: MCPParticleControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPParticleControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: physics_material
+    Description: 'Creates and manages PhysicsMaterial assets. Actions: create, get,
+      set, assign, list'
+    ClassName: MCPPhysicsMaterialTool
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPPhysicsMaterialTool, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: sceneview_camera
+    Description: 'Controls Scene View camera. Actions: get_position, set_position,
+      look_at, frame_object, align_to_view, set_mode'
+    ClassName: MCPSceneViewCamera
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSceneViewCamera, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: input_simulation
+    Description: 'Simulates input in Play Mode. Actions: key_down, key_up, key_press,
+      mouse_click, mouse_move, get_state, axis'
+    ClassName: MCPInputSimulation
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPInputSimulation, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: collision_matrix
+    Description: 'Controls Physics collision matrix. Actions: get, set, ignore_collision,
+      enable_collision'
+    ClassName: MCPCollisionMatrix
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPCollisionMatrix, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: package_manager
+    Description: 'Controls Unity Package Manager. Actions: list, add, remove, search,
+      update, get_info'
+    ClassName: MCPPackageManager
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPPackageManager, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: post_processing
+    Description: 'Controls Post-Processing / URP Volumes. Actions: get_volumes, create_volume,
+      set_override, get_profiles, create_profile'
+    ClassName: MCPPostProcessing
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPPostProcessing, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: terrain_control
+    Description: 'Controls Terrain. Actions: create, get_settings, set_size, get_height,
+      set_height, paint_texture, add_tree, get_all'
+    ClassName: MCPTerrainControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPTerrainControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: debug_draw
+    Description: 'Draws debug shapes in Scene view. Actions: line, sphere, cube,
+      ray, label, clear'
+    ClassName: MCPDebugDraw
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPDebugDraw, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: time_control
+    Description: 'Control Unity''s time settings. Actions: get, set_timescale, set_fixed_delta,
+      pause, resume, slow_motion, fast_forward'
+    ClassName: MCPTimeControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPTimeControl, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: render_settings
+    Description: 'Control Unity''s render settings. Actions: get, set_skybox, set_fog,
+      set_ambient, set_flare, set_halo'
+    ClassName: MCPRenderSettings
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPRenderSettings, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: camera_control
+    Description: 'Control cameras in scene. Actions: list, get_main, set_main, get_properties,
+      set_properties, screenshot, look_at'
+    ClassName: MCPCameraControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPCameraControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: multi_scene
+    Description: 'Manage multiple scenes. Actions: list_loaded, load_additive, unload,
+      set_active, get_root_objects, move_object'
+    ClassName: MCPMultiScene
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPMultiScene, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: script_runner
+    Description: 'Run C# code snippets safely. Actions: execute, evaluate, list_types'
+    ClassName: MCPScriptRunner
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPScriptRunner, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: dynamic_compile
+    Description: 'Execute C# code instantly without Domain Reload. Actions: execute,
+      evaluate, create_delegate, get_types'
+    ClassName: MCPDynamicCompiler
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPDynamicCompiler, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: editor_control
+    Description: 'Control Unity Editor: force_refresh, force_recompile, get_settings,
+      set_auto_refresh, focus_unity'
+    ClassName: MCPEditorControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPEditorControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: assign_asset_reference
+    Description: 'Assigns asset references to component properties. Params: assetPath,
+      targetObject, targetComponent, targetProperty'
+    ClassName: MCPAssetReferenceAssigner
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPAssetReferenceAssigner, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: bulk_set_property
+    Description: 'Sets property on multiple objects. Params: searchMethod (by_tag/by_name/by_component),
+      searchTerm, componentName, propertyName, value'
+    ClassName: MCPBulkSetProperty
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPBulkSetProperty, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: execute_csharp
+    Description: 'Executes C# code in Unity Editor. Params: code (C# expression or
+      statement), returnResult (bool)'
+    ClassName: MCPExecuteCSharp
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPExecuteCSharp, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: copy_component
+    Description: 'Copies component values between GameObjects. Params: sourceObject,
+      targetObject, componentName, properties (optional array)'
+    ClassName: MCPCopyComponent
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPCopyComponent, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: screenshot
+    Description: 'Capture screenshots. Actions: game_view, scene_view, object_preview,
+      camera'
+    ClassName: MCPScreenshot
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPScreenshot, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: bookmark_manager
+    Description: 'Bookmark objects/assets for quick access. Actions: add, remove,
+      list, goto, clear'
+    ClassName: MCPBookmarkManager
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPBookmarkManager, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: console_helper
+    Description: 'Analyze console logs. Actions: get_errors, get_warnings, get_by_file,
+      search, get_summary, suppress'
+    ClassName: MCPConsoleHelper
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPConsoleHelper, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: asset_creator
+    Description: 'Create common assets quickly. Actions: material, animation_clip,
+      animator_controller, render_texture, gradient, animation_curve'
+    ClassName: MCPAssetCreator
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPAssetCreator, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: performance_monitor
+    Description: 'Monitor performance metrics. Actions: get_fps, get_memory_trend,
+      get_draw_calls, get_batches, get_tris, benchmark'
+    ClassName: MCPPerformanceMonitor
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPPerformanceMonitor, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: scene_validator
+    Description: 'Validate scene before build. Actions: validate_all, check_references,
+      check_layers, check_tags, check_prefabs, check_cameras'
+    ClassName: MCPSceneValidator
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSceneValidator, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: shortcut_helper
+    Description: 'Quick actions and shortcuts. Actions: focus_game, focus_scene,
+      focus_inspector, focus_hierarchy, focus_project, toggle_play, pause, step'
+    ClassName: MCPShortcutHelper
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPShortcutHelper, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: modern_unity
+    Description: 'Modern Unity support: UI Toolkit (UXML/USS), Input System, Package
+      Manager. Actions: generate_uxml, generate_uss, get_input_actions, create_input_action'
+    ClassName: MCPModernTools
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPModernTools, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: upm_control
+    Description: 'Unity Package Manager: list, add, remove, search packages. Modern
+      async API.'
+    ClassName: MCPUPMControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPUPMControl, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: project_settings
+    Description: 'Manages Unity Project Settings. Actions: get_physics, set_physics,
+      get_quality, set_quality, get_time, set_time, get_tags_layers'
+    ClassName: MCPProjectSettings
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPProjectSettings, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: asset_importer
+    Description: 'Controls asset import settings. Actions: get_texture, set_texture,
+      get_model, set_model, get_audio, set_audio, reimport'
+    ClassName: MCPAssetImporter
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPAssetImporter, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: build_pipeline
+    Description: 'Controls build process. Actions: get_scenes, set_scenes, get_settings,
+      build, get_defines, set_defines'
+    ClassName: MCPBuildPipeline
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPBuildPipeline, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: lighting_control
+    Description: 'Controls lighting and baking. Actions: get_settings, set_ambient,
+      bake, clear_baked, get_probes'
+    ClassName: MCPLightingControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPLightingControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: debug_visualizer
+    Description: 'Visual debugging without Unity screen. Actions: describe_scene,
+      describe_object, get_bounds, get_spatial_map, compare_screenshots'
+    ClassName: MCPDebugVisualizer
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPDebugVisualizer, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: scene_diff
+    Description: 'Compares scene states. Actions: snapshot, compare, list_snapshots,
+      clear_snapshots'
+    ClassName: MCPSceneDiff
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSceneDiff, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: security_control
+    Description: 'Security settings: get/set security level, approve/deny operations,
+      view pending. Actions: get_level, set_level, get_pending, clear_session'
+    ClassName: MCPSecurity
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSecurity, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: execute_csharp
+    Description: 'SUPER TOOL: Execute any C# code in Unity Editor. Actions: execute
+      (run code), evaluate (get value), batch (multiple), query (find objects), help'
+    ClassName: MCPSuperTool
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSuperTool, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: audio_mixer
+    Description: 'Controls AudioMixer. Actions: list, get_groups, set_float, get_float,
+      set_snapshot, get_snapshots, create'
+    ClassName: MCPAudioMixer
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPAudioMixer, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: cinemachine_control
+    Description: 'Controls Cinemachine cameras. Actions: list, create, set_follow,
+      set_look_at, set_priority, get_settings, set_settings'
+    ClassName: MCPCinemachineControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPCinemachineControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: reflection_probe
+    Description: 'Controls Reflection Probes. Actions: list, create, bake, bake_all,
+      get_settings, set_settings'
+    ClassName: MCPReflectionProbe
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPReflectionProbe, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: profiler_control
+    Description: 'Controls Unity Profiler. Actions: get_memory, get_stats, get_object_count,
+      find_heavy_objects, gc_collect'
+    ClassName: MCPProfilerControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPProfilerControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: dependency_analyzer
+    Description: 'Analyzes asset dependencies. Actions: get_dependencies, get_dependents,
+      find_unused, find_duplicates'
+    ClassName: MCPDependencyAnalyzer
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPDependencyAnalyzer, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: code_generator
+    Description: 'Generates boilerplate code. Actions: monobehaviour, scriptable_object,
+      interface, singleton, state_machine, event_channel'
+    ClassName: MCPCodeGenerator
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPCodeGenerator, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: scene_optimizer
+    Description: 'Optimizes scene. Actions: analyze, set_static, combine_meshes,
+      optimize_lights, remove_empty, fix_scale'
+    ClassName: MCPSceneOptimizer
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSceneOptimizer, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: input_simulation_enhanced
+    Description: 'Enhanced input simulation with InputSystem support. Actions: setup_receiver,
+      send_key, send_axis, send_mouse, get_status'
+    ClassName: MCPInputSimulationEnhanced
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPInputSimulationEnhanced, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: lod_control
+    Description: 'Controls LOD Groups. Actions: list, create, get_settings, set_settings,
+      calculate_bounds'
+    ClassName: MCPLODControl
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPLODControl, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: occlusion_culling
+    Description: 'Controls Occlusion Culling. Actions: get_settings, set_settings,
+      bake, clear, visualize'
+    ClassName: MCPOcclusionCulling
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPOcclusionCulling, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: unity_package
+    Description: 'Manage .unitypackage files. Actions: analyze, list_contents, import,
+      import_selective, detect_conflicts, organize, fix_references'
+    ClassName: MCPUnityPackageTool
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPUnityPackageTool, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: unity_reset
+    Description: 'Emergency Unity recovery and reset tool. Actions: soft_reset, hard_reset,
+      force_recompile, clear_cache, reset_layout, reset_editor_prefs, recover_scene,
+      reset_input, reset_physics, full_recovery, diagnose'
+    ClassName: MCPUnityReset
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPUnityReset, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: select_objects
+    Description: 'Selects objects in Unity Hierarchy. Params: names (array), searchMethod
+      (by_name/by_tag/by_component), additive (bool)'
+    ClassName: MCPSelectObjects
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSelectObjects, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: get_all_properties
+    Description: 'Gets ALL serialized property values from a component. Params: objectName,
+      componentName'
+    ClassName: MCPGetAllProperties
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPGetAllProperties, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: find_missing
+    Description: 'Finds all missing references and scripts in scene. Params: includeInactive
+      (bool)'
+    ClassName: MCPFindMissing
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPFindMissing, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: set_layer_recursive
+    Description: 'Sets layer on object and ALL children. Params: objectName, layerName
+      or layerIndex'
+    ClassName: MCPSetLayerRecursive
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPSetLayerRecursive, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: instantiate_prefab
+    Description: 'Instantiates a prefab in scene. Params: prefabPath, position (array),
+      rotation (array), parent, name'
+    ClassName: MCPInstantiatePrefab
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPInstantiatePrefab, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: raycast_scene
+    Description: 'Performs raycast in scene. Params: origin (array), direction (array),
+      maxDistance, layerMask'
+    ClassName: MCPRaycastScene
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPRaycastScene, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: measure_distance
+    Description: 'Measures distance between objects. Params: object1, object2 OR
+      objects (array for chain)'
+    ClassName: MCPMeasureDistance
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPMeasureDistance, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: list_assets_folder
+    Description: 'Lists assets in a folder. Params: folderPath, filter (t:Material,
+      t:Prefab, etc.), recursive'
+    ClassName: MCPListAssetsFolder
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPListAssetsFolder, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: batch_rename
+    Description: 'Renames multiple objects. Params: searchMethod, searchTerm, newName,
+      pattern ({name}, {index}, {type})'
+    ClassName: MCPBatchRename
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPBatchRename, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: export_scene_data
+    Description: 'Exports scene/object data to JSON. Params: objectName (optional,
+      null=whole scene), includeComponents, includeChildren'
+    ClassName: MCPExportSceneData
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPExportSceneData, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: vision_capture
+    Description: 'Multimodal vision: capture GameView/SceneView as Base64 image.
+      Actions: screenshot, get_ui_bounds, analyze_layout'
+    ClassName: MCPVisionTools
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPVisionTools, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: transform_tools
+    Description: 'Advanced transform operations. Actions: align, distribute, snap_to_grid,
+      reset_transform, match_transform, randomize, center_pivot'
+    ClassName: MCPTransformTools
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPTransformTools, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: hierarchy_organizer
+    Description: 'Organize hierarchy. Actions: group_by_type, group_by_name, sort_children,
+      create_folder, move_to_folder, flatten, remove_empty'
+    ClassName: MCPHierarchyOrganizer
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPHierarchyOrganizer, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: tag_layer_manager
+    Description: 'Manage tags and layers. Actions: list_tags, list_layers, add_tag,
+      add_layer, set_tag, set_layer, find_by_tag, find_by_layer'
+    ClassName: MCPTagLayerManager
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPTagLayerManager, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: component_search
+    Description: 'Search for components. Actions: find_all, find_missing_scripts,
+      count_by_type, get_component_types'
+    ClassName: MCPComponentSearch
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPComponentSearch, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: playerprefs_editor
+    Description: 'Edit PlayerPrefs for debugging. Actions: get, set, delete, delete_all,
+      list_keys'
+    ClassName: MCPPlayerPrefsEditor
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPPlayerPrefsEditor, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: quick_notes
+    Description: 'Add notes/context to scene for AI understanding. Actions: add,
+      get, list, clear, add_to_object'
+    ClassName: MCPQuickNotes
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPQuickNotes, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: duplicate_finder
+    Description: 'Find duplicates in scene/project. Actions: find_duplicate_names,
+      find_duplicate_materials, find_overlapping, find_identical_transforms'
+    ClassName: MCPDuplicateFinder
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPDuplicateFinder, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: batch_operations
+    Description: 'Batch operations on multiple objects. Actions: enable_all, disable_all,
+      delete_by_name, replace_component, set_property_all'
+    ClassName: MCPBatchOperations
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.MCPBatchOperations, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: read_console
+    Description: 
+    ClassName: ReadConsole
+    Namespace: MCPForUnity.Editor.Tools
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.ReadConsole, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: manage_prefabs
+    Description: 
+    ClassName: ManagePrefabs
+    Namespace: MCPForUnity.Editor.Tools.Prefabs
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Prefabs.ManagePrefabs, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 0
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: timeline_control
+    Description: 'Controls Unity Timeline/Playables. Actions: list_directors, get_tracks,
+      play, pause, stop, set_time, get_bindings, bind_object, create_track, add_clip'
+    ClassName: TimelineControl
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.TimelineControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: quality_control
+    Description: 'Controls Unity Quality Settings. Actions: get_levels, set_level,
+      get_current, modify_settings'
+    ClassName: QualityControl
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.QualityControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: physics_control
+    Description: 'Controls Unity Physics. Actions: simulate_step, get_settings, set_settings,
+      raycast_batch, overlap_sphere, get_contacts, set_layer_collision'
+    ClassName: PhysicsControl
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.PhysicsControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: gizmos_control
+    Description: 'Controls Editor Gizmos. Actions: get_state, toggle_all, set_icon,
+      toggle_component_gizmo, list_gizmo_types'
+    ClassName: GizmosControl
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.GizmosControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: git_control
+    Description: 'Git integration. Actions: status, log, diff, stage, unstage, commit,
+      branch_list, checkout, stash, pull, push'
+    ClassName: GitControl
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.GitControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: vfx_control
+    Description: 'Controls Visual Effect Graph. Actions: list_vfx, play, stop, reset,
+      set_property, get_properties, set_event'
+    ClassName: VFXControl
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.VFXControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: addressables_control
+    Description: 'Controls Addressables. Actions: list_groups, list_entries, analyze,
+      build, clean, get_settings, modify_entry'
+    ClassName: AddressablesControl
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.AddressablesControl, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: scene_templates
+    Description: 'Manage scene templates. Actions: list, create_from_scene, instantiate,
+      delete'
+    ClassName: SceneTemplates
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.SceneTemplates, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: asmdef_manager
+    Description: 'Manage Assembly Definitions. Actions: list, create, modify, get_references,
+      add_reference'
+    ClassName: AsmDefManager
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.AsmDefManager, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: editor_prefs
+    Description: 'Manage EditorPrefs. Actions: get, set, delete, list_keys, has_key,
+      clear_all'
+    ClassName: EditorPrefsManager
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.EditorPrefsManager, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: sprite_tools
+    Description: '2D/Sprite tools. Actions: slice_sprite, create_atlas, get_sprite_info,
+      set_pivot, set_border, list_atlases'
+    ClassName: SpriteTools
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.SpriteTools, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: animation_events
+    Description: 'Manage animation events. Actions: list_events, add_event, remove_event,
+      get_clip_info'
+    ClassName: AnimationEventsManager
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.AnimationEventsManager, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: grid_snap
+    Description: 'Control grid and snap settings. Actions: get_settings, set_grid_size,
+      set_rotation_snap, set_scale_snap, toggle_snap'
+    ClassName: GridSnapSettings
+    Namespace: MCPForUnity.Editor.Tools.Master
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Tools.Master.GridSnapSettings, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: auto_compile
+    Description: 'Control auto-compile system. Actions: status, enable, disable,
+      force_refresh, force_compile, restart'
+    ClassName: MCPAutoCompileTool
+    Namespace: MCPForUnity.Editor.Core
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Core.MCPAutoCompileTool, UnityMCPVibe.Editor,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: get_project_vibe
+    Description: 'Get instant project context. Returns: Unity version, render pipeline
+      (URP/HDRP/Built-in), input system, paths, active scene, object count. Use this
+      FIRST to understand the project.'
+    ClassName: MCPVibeSystem
+    Namespace: MCPForUnity.Editor.Core
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Core.MCPVibeSystem, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  - Name: quick_vibe
+    Description: 'Quick lightweight vibe check. Returns: scene name, object count,
+      play state, compile state. Use for fast status updates.'
+    ClassName: MCPQuickVibe
+    Namespace: MCPForUnity.Editor.Core
+    AssemblyName: UnityMCPVibe.Editor
+    FullTypeName: MCPForUnity.Editor.Core.MCPQuickVibe, UnityMCPVibe.Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    AutoRegister: 1
+    RequiresPolling: 0
+    PollAction: status
+    StructuredOutput: 1
+    Parameters: []
+  _generatedAt: 2026-08-03T13:06:02.1713065Z
+  _unityVersion: 2022.3.62f3c1
+  _toolCount: 108
